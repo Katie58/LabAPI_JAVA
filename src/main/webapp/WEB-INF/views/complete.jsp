@@ -4,18 +4,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="../style.css">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Complete People</title>
 </head>
 <body>
 	<div>
-		<c:forEach var="person" items="${ complete }">
-			First Name: ${ person.firstName }<br>
-			Last Name: ${ person.lastName }<br>
-			Innovation: ${ person.innovation }<br>
-			Year: ${ person.year }<br>
-			<hr>
-		</c:forEach>
+	<h1><center>Complete List of Famous People in Computer Science History<center></h1>
+	<div>
+		<table style="position:absolute;left:25%;top:15%">
+			<tr>
+				<th class="left">Year</th>
+				<th class="left">First Name</th>
+				<th class="left">Last Name</th>
+				<th class="left">Innovation</th>
+			</tr>
+			<c:forEach var="person" items="${ complete }">
+				<tr>
+					<td class="left">${ person.year }</td>
+					<td class="left">${ person.firstName }</td>
+					<td class="left">${ person.lastName }</td>
+					<td class="left">${ person.innovation }</td>
+				</tr>
+			</c:forEach>		
+		</table>
+	</div>
 	</div>
 </body>
 </html>
